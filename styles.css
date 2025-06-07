@@ -260,3 +260,26 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+
+.profile-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 768px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.profile-info {
+  margin: 20px 0;
+  font-size: 2em;
+  color: #333;
+  text-align: left;
+}
+
+.profile-info span {
+  font-weight: bold;
+  color: #1a73e8;
+}
