@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:300/auth/profile", {
+    const response = await fetch("http://localhost:3000/auth/profile", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
 
-    if (!responde.ok) {
+    if (!response.ok) {
       throw new Error("Unauthorized");
     }
 
     const user = await response.json();
 
-    document.getElementById("profile-username").textContent =
-      user.username || "";
+    document.getElementById("profile-welcome").textContent =
+      `Welcome, ${user.username} !` || "";
     document.getElementById("profile-username-detail").textContent =
       user.username || "";
     document.getElementById("profile-email").textContent = user.email || "";
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       window.location.href = "index.html";
     });
   } catch (error) {
+    alert(error);
     localStorage.removeItem("access_token");
     window.location.href = "index.html";
   }
